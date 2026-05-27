@@ -1,0 +1,52 @@
+/* Estilos específicos para el listado de productos */
+.products-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-create-product {
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-create-product:hover {
+    background-color: #27ae60;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.products-table th {
+    background-color: #2c3e50;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+.products-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-link {
+    color: #2c3e50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.product-link:hover {
+    color: #3498db;
+}

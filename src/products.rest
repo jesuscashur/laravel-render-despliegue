@@ -1,0 +1,63 @@
+### 1. Listar todos los productos
+GET http://localhost:8080/api/product
+Accept: application/json
+
+###
+
+### 2. Crear un nuevo producto (Falla la validación: Nombre corto y descripción corta)
+POST http://localhost:8080/api/product
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "P",
+    "description": "Corta",
+    "price": -900.50,
+    "stock": 20000
+}
+
+###
+
+### 3. Crear un producto Válido (Código 201 Created)
+POST http://localhost:8080/api/product
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Teclado Mecánico RGB",
+    "description": "Teclado premium con switches ópticos y retroiluminación",
+    "price": 89.99,
+    "stock": 45
+}
+
+###
+
+### 4. Mostrar el producto con ID 5 (Route Model Binding + Resource)
+GET http://localhost:8080/api/product/5
+Accept: application/json
+
+###
+
+### 5. Probar el error 404 Automático (Buscando un ID que no existe)
+GET http://localhost:8080/api/product/9999
+Accept: application/json
+
+###
+
+### 6. Actualizar el producto con ID 8
+PUT http://localhost:8080/api/product/8
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Teclado Mecánico PRO",
+    "description": "Teclado premium actualizado con switches silenciosos",
+    "price": 99.99,
+    "stock": 40
+}
+
+###
+
+### 7. Eliminar el producto con ID 8
+DELETE http://localhost:8080/api/product/8
+Accept: application/json
